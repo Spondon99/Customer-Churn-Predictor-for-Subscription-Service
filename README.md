@@ -33,10 +33,12 @@ churn-predictor-for-subscription-service/
 pip install -r requirements.txt
 
 # generate the dataset
-cd data && python generate_data.py
+cd data
+python generate_data.py
 
 # train the model
-cd ../src && python train.py
+cd ../src
+python train.py
 
 # predict churn for a subscriber
 python predict.py --plan free --days_since_login 21 --emails_opened 0 --sessions_per_week 1
