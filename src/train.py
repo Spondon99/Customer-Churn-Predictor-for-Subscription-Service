@@ -11,8 +11,8 @@ from xgboost import XGBClassifier
 
 from features import engineer_features, FEATURE_COLS
 
-DATA_PATH = "E:/AI-ML-Data Projects/Customer Churn Predictor/subscribers.csv"
-MODEL_PATH = "E:/AI-ML-Data Projects/Customer Churn Predictor/churn_model.pkl"
+DATA_PATH = "../data/subscribers.csv"
+MODEL_PATH = "../model/churn_model.pkl"
 
 
 def load_data(path):
@@ -68,8 +68,8 @@ def plot_shap(model, X_test):
     shap.summary_plot(shap_values, X_test, feature_names=FEATURE_COLS, show=False)
     plt.tight_layout()
 
-    os.makedirs("E:/AI-ML-Data Projects/Customer Churn Predictor/plots", exist_ok=True)
-    plt.savefig("E:/AI-ML-Data Projects/Customer Churn Predictor/plots/shap_summary.png", dpi=150, bbox_inches="tight")
+    os.makedirs("../plots", exist_ok=True)
+    plt.savefig("../plots/shap_summary.png", dpi=150, bbox_inches="tight")
     print("shap plot saved to plots/shap_summary.png")
     plt.close()
 
