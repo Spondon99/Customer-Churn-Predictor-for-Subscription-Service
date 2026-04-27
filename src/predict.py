@@ -7,7 +7,7 @@ import shap
 
 from features import engineer_features, FEATURE_COLS
 
-MODEL_PATH = "E:/AI-ML-Data Projects/Customer Churn Predictor/churn_model.pkl"
+MODEL_PATH = "../model/churn_model.pkl"
 
 
 def load_model(path):
